@@ -1,0 +1,3 @@
+include ':mvvmlin'
+include ':app'
+rootProject.name = "ZhenKotlin_Android"

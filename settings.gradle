@@ -1,3 +1,4 @@
+include ':paging3'
 include ':base'
 include ':mvvmlin'
 include ':app'

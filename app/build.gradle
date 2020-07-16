@@ -24,6 +24,14 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
     dataBinding {
         enabled true
     }
@@ -40,19 +48,4 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
     api project(path:':base')
-
-//    def room_version = "2.2.5"
-//    implementation "androidx.room:room-runtime:$room_version"
-//    kapt "androidx.room:room-compiler:$room_version" // For Kotlin use kapt instead of annotationProcessor
-//    // optional - Kotlin Extensions and Coroutines support for Room
-//    implementation "androidx.room:room-ktx:$room_version"
-//    // Test helpers
-//    testImplementation "androidx.room:room-testing:$room_version"
-
-    //room
-//    api rootProject.ext.room["room-runtime"]
-//    kapt rootProject.ext.room["room-compiler"]
-//    api rootProject.ext.room["room-ktx"]
-//    testImplementation rootProject.ext.room["room-testing"]
-
 }

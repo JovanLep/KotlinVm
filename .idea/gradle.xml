@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/base" />
             <option value="$PROJECT_DIR$/mvvmlin" />
+            <option value="$PROJECT_DIR$/paging3" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

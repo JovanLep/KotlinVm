@@ -40,4 +40,5 @@ dependencies {
     kapt rootProject.ext.dependencies["glide-compiler"]
     // utils 集合了大量常用的工具类
     api rootProject.ext.dependencies.utilcodex
+
 }

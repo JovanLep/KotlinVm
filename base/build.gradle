@@ -33,15 +33,13 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.3.0'
     implementation 'androidx.appcompat:appcompat:1.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
-    api project(path:':mvvmlin')
+    api project(path:':mvvm')
     api project(path: ':paging3')
 
     //room
@@ -49,5 +47,6 @@ dependencies {
     kapt rootProject.ext.room["room-compiler"]
     api rootProject.ext.room["room-ktx"]
     api rootProject.ext.room["room-testing"]
+
 
 }

@@ -1,5 +1,5 @@
 include ':paging3'
 include ':base'
-include ':mvvmlin'
+include ':mvvm'
 include ':app'
 rootProject.name = "ZhenKotlin_Android"

@@ -13,7 +13,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/base" />
-            <option value="$PROJECT_DIR$/mvvmlin" />
+            <option value="$PROJECT_DIR$/mvvm" />
             <option value="$PROJECT_DIR$/paging3" />
           </set>
         </option>

@@ -4,15 +4,14 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.0"
-
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
     defaultConfig {
-        applicationId "com.zhenpin.zhenkotlin_android"
-        minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        applicationId rootProject.ext.android.applicationId
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -38,12 +37,25 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.3.0'
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-
     api project(path:':base')
+    //首页模块
+    if (rootProject.ext.module.isHomeLib){
+        implementation project(path: ':home')
+    }
+    //订单模块
+    if (rootProject.ext.module.isOrderLib){
+        implementation project(path: ':order')
+    }
+    //商品模块
+    if (rootProject.ext.module.isProductLib){
+        implementation project(path: ':product')
+    }
+    //支付模块
+    if (rootProject.ext.module.isPayLib){
+        implementation project(path: ':pay')
+    }
+    //登录模块
+    if (rootProject.ext.module.isLoginLib){
+        implementation project(path: ':login')
+    }
 }

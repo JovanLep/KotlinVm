@@ -1,4 +1,4 @@
-package com.zhen.mvvm.binding
+package com.zhen.base.binding
 
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter

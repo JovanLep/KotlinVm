@@ -1,4 +1,4 @@
-package com.zhen.mvvm.binding
+package com.zhen.base.binding
 
 import androidx.databinding.BindingAdapter
 import com.google.android.material.tabs.TabLayout

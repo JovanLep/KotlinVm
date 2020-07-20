@@ -1,13 +1,13 @@
 ext {
     //android开发版本配置
     android = [
-            compileSdkVersion: 29,
-            buildToolsVersion: "29.0.3",
-            applicationId    : "com.zhen.mvvm",
+            compileSdkVersion: 30,
+            buildToolsVersion: "30.0.1",
+            applicationId    : "com.zhenpin.luxurystore",
             minSdkVersion    : 21,
-            targetSdkVersion : 29,
-            versionCode      : 4,
-            versionName      : "1.0",
+            targetSdkVersion : 30,
+            versionCode      : 200720,
+            versionName      : "5.4",
     ]
     //version配置
     versions = [
@@ -59,6 +59,15 @@ ext {
             'room-ktx'     : "androidx.room:room-ktx:${versions["room"]}",
             'room-testing' : "androidx.room:room-testing:${versions["room"]}",
     ]
+    paging = [
+            "paging-runtime": "androidx.paging:paging-runtime:3.0.0-alpha02",
+
+            "smart"         : 'com.scwang.smart:refresh-layout-kernel:2.0.1',
+
+            "smart-header"  : 'com.scwang.smart:refresh-header-classics:2.0.1',    //经典刷新头
+
+            "recyclerview"  : 'androidx.recyclerview:recyclerview:1.1.0',
+    ]
 
     //依赖第三方配置
     dependencies = [
@@ -74,11 +83,31 @@ ext {
             'bottom-tab'                : 'me.majiajie:pager-bottom-tab-strip:2.3.0X',
             BRVAH                       : 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46',
             bdclta                      : 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:3.1.1',
-            'bdclta-rv'                 : 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:3.1.1'
+            'bdclta-rv'                 : 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:3.1.1',
+
+            //smartx
+            "refresh-androidx"          : "com.scwang.smart:refresh-layout-kernel:2.0.1",
+            //mmkv
+            "mmkv"                      : "com.tencent:mmkv-static:1.1.2",
+    ]
+
+    //模块是否作为Library
+    module = [
+            //首页模块
+            isHomeLib   : 1,
+            //订单模块
+            isOrderLib  : 1,
+            //商品模块
+            isProductLib: 1,
+            //支付
+            isPayLib    : 1,
+            //登录
+            isLoginLib  : 1
     ]
 
     androidxs = androidx.values()
     network = retrofit.values()
+    pagings = paging.values()
 }
 
 

@@ -1,11 +1,11 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     buildToolsVersion rootProject.ext.android.buildToolsVersion
+
     defaultConfig {
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
@@ -22,35 +22,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
 }
 
 dependencies {
-    api project(path:':mvvm')
-    api project(path:':pay')
+    api project(path: ':base')
 
-    testApi rootProject.ext.test["junit"]
-    androidTestApi rootProject.ext.test["runner"]
-    androidTestApi rootProject.ext.test["espresso-core"]
-
-    //room
-    api rootProject.ext.room["room-runtime"]
-    kapt rootProject.ext.room["room-compiler"]
-    api rootProject.ext.room["room-ktx"]
-    api rootProject.ext.room["room-testing"]
-
-    //glide
-    api rootProject.ext.dependencies.glide
-    kapt rootProject.ext.dependencies["glide-compiler"]
-
-    //mmkv
-    api rootProject.ext.dependencies.mmkv
-    //paging3
-    api rootProject.ext.pagings
 }

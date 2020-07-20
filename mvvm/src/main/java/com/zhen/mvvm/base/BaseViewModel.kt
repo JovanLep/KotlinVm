@@ -14,7 +14,7 @@ import kotlinx.coroutines.flow.flow
 
 open class BaseViewModel : AndroidViewModel(Utils.getApp()), LifecycleObserver {
 
-    val defUI: UIChange by lazy { UIChange() }
+    val defUI: UiChange by lazy { UiChange() }
 
     /**
      * 所有网络请求都在 viewModelScope 域中启动，当页面销毁时会自动
@@ -151,7 +151,7 @@ open class BaseViewModel : AndroidViewModel(Utils.getApp()), LifecycleObserver {
     /**
      * UI事件
      */
-    inner class UIChange {
+    inner class UiChange {
         val showDialog by lazy { SingleLiveEvent<String>() }
         val dismissDialog by lazy { SingleLiveEvent<Void>() }
         val toastEvent by lazy { SingleLiveEvent<String>() }

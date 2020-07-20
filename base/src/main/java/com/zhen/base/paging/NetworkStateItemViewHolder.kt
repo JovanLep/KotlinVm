@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.core.view.isVisible
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.RecyclerView
+import com.zhen.base.R
 
 class NetworkStateItemViewHolder(
     parent: ViewGroup,

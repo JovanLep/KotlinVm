@@ -9,9 +9,9 @@ import androidx.paging.LoadState
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.scwang.smart.refresh.layout.SmartRefreshLayout
-import com.zhenpin.paging3.PostsLoadStateAdapter
-import com.zhenpin.paging3.TestAdapter
-import com.zhenpin.paging3.TestViewModel
+import com.zhen.base.paging.PostsLoadStateAdapter
+import com.zhen.base.paging.TestAdapter
+import com.zhen.base.paging.TestViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.collectLatest
 

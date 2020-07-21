@@ -21,6 +21,7 @@ ext {
             dialogs   : '3.1.1',
             retrofit  : '2.7.2',
             smart     : '2.0.1',
+            bus       : '2.0.0',
             room      : '2.2.5'
     ]
 
@@ -77,6 +78,7 @@ ext {
             'bdclta-rv'                 : 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:3.1.1',
             //mmkv
             'mmkv'                      : "com.tencent:mmkv-static:1.1.2",
+            "ElegantBus"                : "com.github.codyer.ElegantBus:core:${versions["bus"]}",
     ]
 
     //模块是否作为Library

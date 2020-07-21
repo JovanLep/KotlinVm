@@ -2,6 +2,10 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+//添加听云插件
+apply plugin: 'newlens'
+//添加神策数据插件
+apply plugin: 'com.sensorsdata.analytics.android'
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -58,4 +62,9 @@ dependencies {
     if (rootProject.ext.module.isLoginLib){
         implementation project(path: ':login')
     }
+
+    //内存检测
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.2'
+    //听云
+    releaseImplementation 'com.networkbench.newlens.agent.android:nbs.newlens.agent:2.14.6'
 }

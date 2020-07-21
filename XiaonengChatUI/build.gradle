@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+
+dependencies {
+    api fileTree(include: '*.jar', dir: 'libs')
+
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
+}
+String jarName = 'xiaonengchatui.jar'
+String libPath = '../build/libs'
+task makeJar(type: Jar, dependsOn: ['deleteOldJar', 'copyLibs', 'build']) {
+    archiveName = jarName
+    from('build/intermediates/classes/release')
+    destinationDir = file(libPath)
+    exclude('com/xiaoneng/**/*.class')
+    include('cn/xiaoneng/**/*.class')
+}
+
+task deleteOldJar(type: Delete) {
+    delete libPath + jarName
+}
+
+task copyLibs(type: Copy) {
+    from('libs/')
+    into(libPath)
+    include('*.*', '/*/*.*')
+}

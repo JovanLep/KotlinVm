@@ -34,23 +34,29 @@ android {
 dependencies {
     api project(path:':mvvm')
     api project(path:':pay')
+    api project(path:':XiaonengChatUI')
 
     testApi rootProject.ext.test["junit"]
     androidTestApi rootProject.ext.test["runner"]
     androidTestApi rootProject.ext.test["espresso-core"]
 
+    api 'jp.wasabeef:glide-transformations:4.1.0'
     //room
     api rootProject.ext.room["room-runtime"]
     kapt rootProject.ext.room["room-compiler"]
     api rootProject.ext.room["room-ktx"]
     api rootProject.ext.room["room-testing"]
-
     //glide
     api rootProject.ext.dependencies.glide
     kapt rootProject.ext.dependencies["glide-compiler"]
-
+    //bus
+    api rootProject.ext.dependencies["ElegantBus"]
     //mmkv
     api rootProject.ext.dependencies.mmkv
     //paging3
     api rootProject.ext.pagings
+    //神策
+    releaseImplementation 'com.sensorsdata.analytics.android:SensorsAnalyticsSDK:4.1.2'
+    //banner
+    api 'com.youth.banner:banner:2.1.0'
 }

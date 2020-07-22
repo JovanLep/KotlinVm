@@ -1,6 +1,6 @@
 if (rootProject.ext.module.isOrderLib) {
     apply plugin: 'com.android.library'
-}else {
+} else {
     apply plugin: 'com.android.application'
 }
 apply plugin: 'kotlin-android'
@@ -47,5 +47,7 @@ android {
 }
 
 dependencies {
-    api project(path:':base')
+    api project(path: ':base')
+//    implementation project(path: ':pay')
+
 }

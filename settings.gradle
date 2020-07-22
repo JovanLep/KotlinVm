@@ -1,4 +1,3 @@
-include ':XiaonengChatUI'
 include ':pay'
 include ':product'
 include ':order'

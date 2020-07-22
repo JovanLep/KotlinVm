@@ -30,19 +30,15 @@ android {
         jvmTarget = "1.8"
     }
 
-    kapt {
-        arguments {
-            arg("AROUTER_MODULE_NAME", project.getName())
-        }
-    }
+//    kapt {
+//        arguments {
+//            arg("AROUTER_MODULE_NAME", project.getName())
+//        }
+//    }
 }
 
 dependencies {
     api project(path:':mvvm')
-    api project(path:':pay')
-    api project(path:':XiaonengChatUI')
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
     testApi rootProject.ext.test["junit"]
     androidTestApi rootProject.ext.test["runner"]
@@ -72,7 +68,7 @@ dependencies {
     api rootProject.ext.dependencies.permissionx
     //glide-trans
     api rootProject.ext.dependencies["glide-trans"]
-    //arouter
-    api rootProject.ext.dependencies.arouter
-    kapt rootProject.ext.dependencies["arouter-compiler"]
+//    //arouter
+//    api rootProject.ext.dependencies.arouter
+//    kapt rootProject.ext.dependencies["arouter-compiler"]
 }

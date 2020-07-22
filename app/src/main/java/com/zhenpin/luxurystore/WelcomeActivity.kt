@@ -1,7 +1,7 @@
 package com.zhenpin.luxurystore
 
 import android.os.Bundle
-import com.alibaba.android.arouter.launcher.ARouter
+//import com.alibaba.android.arouter.launcher.ARouter
 import com.zhen.mvvm.base.BaseActivity
 import com.zhen.mvvm.base.NoViewModel
 import com.zhenpin.luxurystore.databinding.ActivityWelcomeBinding
@@ -18,7 +18,7 @@ class WelcomeActivity : BaseActivity<NoViewModel, ActivityWelcomeBinding>() {
     }
 
     fun startGuide() {
-        ARouter.getInstance().build("/app/guide").navigation()
+//        ARouter.getInstance().build("/app/guide").navigation()
     }
 
 }

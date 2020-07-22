@@ -103,8 +103,6 @@ ext {
             isOrderLib  : 1,
             //商品模块
             isProductLib: 1,
-            //支付
-            isPayLib    : 1,
             //登录
             isLoginLib  : 1
     ]

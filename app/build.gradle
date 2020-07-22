@@ -54,10 +54,6 @@ dependencies {
     if (rootProject.ext.module.isProductLib) {
         implementation project(path: ':product')
     }
-    //支付模块
-    if (rootProject.ext.module.isPayLib) {
-        implementation project(path: ':pay')
-    }
     //登录模块
     if (rootProject.ext.module.isLoginLib) {
         implementation project(path: ':login')

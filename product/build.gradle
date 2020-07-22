@@ -5,6 +5,7 @@ if (rootProject.ext.module.isProductLib) {
 }
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -35,6 +36,12 @@ android {
         enabled true
     }
 
+    kapt {
+        arguments {
+            arg("moduleName", project.getName())
+        }
+    }
+
     sourceSets {
         main {
             if (rootProject.ext.module.isProductLib) {
@@ -48,5 +55,5 @@ android {
 
 dependencies {
     api project(path:':base')
-
+    kapt rootProject.ext.dependencies["arouter-compiler"]
 }

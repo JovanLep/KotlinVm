@@ -29,9 +29,9 @@ buildscript {
         classpath "com.android.tools.build:gradle:4.0.0"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         //添加听云依赖
-        classpath 'com.networkbench.newlens.agent.android:agent-gradle-plugin:2.14.6'
+//        classpath 'com.networkbench.newlens.agent.android:agent-gradle-plugin:2.14.6'
         //添加神策数据依赖
-        classpath 'com.sensorsdata.analytics.android:android-gradle-plugin2:3.2.5'
+//        classpath 'com.sensorsdata.analytics.android:android-gradle-plugin2:3.2.5'
     }
 }
 
@@ -56,11 +56,16 @@ allprojects {
         maven {
             url 'https://dl.bintray.com/zouyuhan/maven'
         }
+
         mavenCentral()
-        flatDir {
-            dirs 'libs'
-        }
+
         maven { url 'https://jitpack.io' }
+
+//        flatDir {
+//            dirs 'libs' /**在libs文件夹下找aar文件*/
+//        }
+
+        flatDir { dirs 'libs', '../base/libs' }
         google()
         jcenter()
     }

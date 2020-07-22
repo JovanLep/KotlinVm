@@ -39,9 +39,9 @@ android {
     sourceSets {
         main {
             if (rootProject.ext.module.isLoginLib) {
-                manifest.srcFile 'src/main/AndroidManifest.xml'
-            } else {
                 manifest.srcFile 'src/main/module/AndroidManifest.xml'
+            } else {
+                manifest.srcFile 'src/main/AndroidManifest.xml'
             }
         }
     }

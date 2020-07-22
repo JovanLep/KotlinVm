@@ -41,30 +41,30 @@ android {
 }
 
 dependencies {
-    api project(path:':base')
+    implementation project(path: ':base')
     //首页模块
-    if (rootProject.ext.module.isHomeLib){
+    if (rootProject.ext.module.isHomeLib) {
         implementation project(path: ':home')
     }
     //订单模块
-    if (rootProject.ext.module.isOrderLib){
+    if (rootProject.ext.module.isOrderLib) {
         implementation project(path: ':order')
     }
     //商品模块
-    if (rootProject.ext.module.isProductLib){
+    if (rootProject.ext.module.isProductLib) {
         implementation project(path: ':product')
     }
     //支付模块
-    if (rootProject.ext.module.isPayLib){
+    if (rootProject.ext.module.isPayLib) {
         implementation project(path: ':pay')
     }
     //登录模块
-    if (rootProject.ext.module.isLoginLib){
+    if (rootProject.ext.module.isLoginLib) {
         implementation project(path: ':login')
     }
 
     //内存检测
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.2'
+    debugImplementation rootProject.ext.dependencies.leakcanary
     //听云
-    releaseImplementation 'com.networkbench.newlens.agent.android:nbs.newlens.agent:2.14.6'
+    releaseImplementation rootProject.ext.dependencies.newlens
 }

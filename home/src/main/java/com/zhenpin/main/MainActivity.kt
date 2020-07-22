@@ -1,11 +1,19 @@
 package com.zhenpin.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.zhen.mvvm.base.BaseActivity
+import com.zhenpin.main.databinding.ActivityMainBinding
+import com.zhenpin.main.viewmodel.MainViewModel
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
+
+    override fun layoutId(): Int = R.layout.activity_main
+
+    override fun initView(savedInstanceState: Bundle?) {
+
+    }
+
+    override fun initData() {
+
     }
 }

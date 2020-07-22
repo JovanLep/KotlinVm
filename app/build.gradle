@@ -3,9 +3,9 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 //添加听云插件
-apply plugin: 'newlens'
+//apply plugin: 'newlens'
 //添加神策数据插件
-apply plugin: 'com.sensorsdata.analytics.android'
+//apply plugin: 'com.sensorsdata.analytics.android'
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -38,9 +38,15 @@ android {
     dataBinding {
         enabled true
     }
+    kapt {
+        arguments {
+            arg("moduleName", project.getName())
+        }
+    }
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(path: ':base')
     //首页模块
     if (rootProject.ext.module.isHomeLib) {
@@ -58,9 +64,9 @@ dependencies {
     if (rootProject.ext.module.isLoginLib) {
         implementation project(path: ':login')
     }
-
+    kapt rootProject.ext.dependencies["arouter-compiler"]
     //内存检测
-    debugImplementation rootProject.ext.dependencies.leakcanary
-    //听云
-    releaseImplementation rootProject.ext.dependencies.newlens
+    implementation rootProject.ext.dependencies.leakcanary
+   //听云
+//    implementation rootProject.ext.dependencies.newlens
 }

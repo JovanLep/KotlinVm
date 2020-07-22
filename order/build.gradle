@@ -5,7 +5,7 @@ if (rootProject.ext.module.isOrderLib) {
 }
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-
+apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     buildToolsVersion rootProject.ext.android.buildToolsVersion
@@ -35,6 +35,12 @@ android {
         enabled true
     }
 
+    kapt {
+        arguments {
+            arg("moduleName", project.getName())
+        }
+    }
+
     sourceSets {
         main {
             if (rootProject.ext.module.isOrderLib) {
@@ -48,6 +54,6 @@ android {
 
 dependencies {
     api project(path: ':base')
-//    implementation project(path: ':pay')
+    kapt rootProject.ext.dependencies["arouter-compiler"]
 
 }

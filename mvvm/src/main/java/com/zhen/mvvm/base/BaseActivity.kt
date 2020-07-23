@@ -9,9 +9,9 @@ import androidx.lifecycle.ViewModelProvider
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.customview.customView
 import com.afollestad.materialdialogs.lifecycle.lifecycleOwner
+import com.blankj.utilcode.util.ToastUtils
 import com.zhen.mvvm.R
 import com.zhen.mvvm.event.Message
-import com.blankj.utilcode.util.ToastUtils
 import java.lang.reflect.ParameterizedType
 
 abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding> : AppCompatActivity() {
@@ -24,7 +24,7 @@ abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding> : AppCompa
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        initViewDataBinding()
+        initViewDataBinding(savedInstanceState)
         lifecycle.addObserver(viewModel)
         //注册 UI事件
         registorDefUIChange()
@@ -40,11 +40,14 @@ abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding> : AppCompa
     /**
      * DataBinding
      */
-    private fun initViewDataBinding() {
+    private fun initViewDataBinding(savedInstanceState: Bundle?) {
         val cls =
             (javaClass.genericSuperclass as ParameterizedType).actualTypeArguments[1] as Class<*>
         if (ViewDataBinding::class.java != cls && ViewDataBinding::class.java.isAssignableFrom(cls)) {
-            mBinding = DataBindingUtil.setContentView(this, layoutId())
+//            mBinding = DataBindingUtil.setContentView(this, layoutId())
+
+            //DataBindingUtil类需要在project的build中配置 dataBinding {enabled true }, 同步后会自动关联android.databinding包
+            mBinding = createBinding(savedInstanceState)
             mBinding?.lifecycleOwner = this
         } else setContentView(layoutId())
         createViewModel()
@@ -108,4 +111,6 @@ abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding> : AppCompa
         }
     }
 
+
+    protected abstract fun createBinding(savedInstanceState: Bundle?): DB?
 }

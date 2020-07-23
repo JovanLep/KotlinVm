@@ -3,7 +3,7 @@ ext {
     android = [
             compileSdkVersion: 30,
             buildToolsVersion: "30.0.1",
-            applicationId    : "com.zhen.luxury",
+            applicationId    : "com.zhenpin.luxury",
             minSdkVersion    : 21,
             targetSdkVersion : 30,
             versionCode      : 200720,
@@ -85,6 +85,7 @@ ext {
             "glide-trans"               : 'jp.wasabeef:glide-transformations:4.1.0',
             "arouter"                   : 'com.alibaba:arouter-api:1.5.0',
             "arouter-compiler"          : 'com.alibaba:arouter-compiler:1.1.4',
+            //神策
             "analytics"                 : 'com.sensorsdata.analytics.android:SensorsAnalyticsSDK:4.1.2',
             //内存检测
             "leakcanary": 'com.squareup.leakcanary:leakcanary-android:2.2',

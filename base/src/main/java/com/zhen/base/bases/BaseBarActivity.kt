@@ -18,7 +18,7 @@ abstract class BaseBarActivity<VM : BaseViewModel, DB : ViewDataBinding> : BaseA
     private var toolbarBind: ActivityBaseBarBinding? = null
     private var mSavedInstanceState: Bundle? = null
 
-    protected open fun createBinding(savedInstanceState: Bundle?): DB? {
+    override fun createBinding(savedInstanceState: Bundle?): DB? {
         mSavedInstanceState = savedInstanceState
         if (hasToolBar) {
             toolbarBind = DataBindingUtil.setContentView(

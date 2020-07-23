@@ -182,7 +182,7 @@ object Printer {
     private fun dotHeaders(header: String): String {
         if (isEmpty(header)) return ""
         val headers =
-            header.split(LINE_SEPARATOR!!.toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
+            header.split(LINE_SEPARATOR.toRegex()).dropLastWhile { it.isEmpty() }.toTypedArray()
         val builder = StringBuilder()
         var tag = "─ "
         if (headers.size > 1) {

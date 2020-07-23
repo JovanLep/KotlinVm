@@ -1,18 +1,20 @@
 package com.zhenpin.luxurystore
 
 import android.os.Bundle
-import android.view.View
+import com.zhen.base.bases.BaseBarActivity
 import com.alibaba.android.arouter.launcher.ARouter
-import com.zhen.mvvm.base.BaseActivity
 import com.zhen.mvvm.base.NoViewModel
 import com.zhenpin.luxurystore.databinding.ActivityWelcomeBinding
-import kotlinx.android.synthetic.main.activity_welcome.*
 
-class WelcomeActivity : BaseActivity<NoViewModel, ActivityWelcomeBinding>(), (View) -> Unit {
+class WelcomeActivity : BaseBarActivity<NoViewModel, ActivityWelcomeBinding>() {
     override fun layoutId(): Int = R.layout.activity_welcome
 
     override fun initView(savedInstanceState: Bundle?) {
-        tv_add.setOnClickListener(View.OnClickListener(this))
+        setBarGone()
+        mBinding?.tvAdd?.setOnClickListener {
+//            startActivity(Intent(this,GuideActivity::class.java))
+            startGuide()
+        }
     }
 
     override fun initData() {
@@ -23,8 +25,6 @@ class WelcomeActivity : BaseActivity<NoViewModel, ActivityWelcomeBinding>(), (Vi
         ARouter.getInstance().build("/home/main").navigation()
     }
 
-    override fun invoke(p1: View) {
-        startGuide()
-    }
+
 
 }

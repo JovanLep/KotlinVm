@@ -13,8 +13,7 @@ import java.util.concurrent.TimeUnit
 
 class RetrofitClient {
     companion object {
-        fun getInstance() =
-            SingletonHolder.INSTANCE
+        fun getInstance() = SingletonHolder.INSTANCE
         private lateinit var retrofit: Retrofit
     }
 
@@ -40,6 +39,7 @@ class RetrofitClient {
                 requestTag = "Request"
                 requestTag = "Response"
             })
+            .addInterceptor(HeaderInterceptor())
             .writeTimeout(20L, TimeUnit.SECONDS)
             .connectionPool(ConnectionPool(8, 15, TimeUnit.SECONDS))
             .build()

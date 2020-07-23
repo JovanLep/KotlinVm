@@ -3,7 +3,7 @@ ext {
     android = [
             compileSdkVersion: 30,
             buildToolsVersion: "30.0.1",
-            applicationId    : "com.zhenpin.luxurystore",
+            applicationId    : "com.zhen.luxury",
             minSdkVersion    : 21,
             targetSdkVersion : 30,
             versionCode      : 200720,

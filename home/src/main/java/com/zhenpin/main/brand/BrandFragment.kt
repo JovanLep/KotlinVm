@@ -3,8 +3,8 @@ package com.zhenpin.main.brand
 import com.zhen.mvvm.base.BaseFragment
 import com.zhenpin.main.R
 import com.zhenpin.main.databinding.FragmentBrandBinding
-import com.zhenpin.main.viewmodel.MainViewModel
+import com.zhenpin.main.viewmodel.HomeViewModel
 
-class BrandFragment :BaseFragment<MainViewModel,FragmentBrandBinding>(){
+class BrandFragment :BaseFragment<HomeViewModel,FragmentBrandBinding>(){
     override fun layoutId(): Int = R.layout.fragment_brand
 }

@@ -18,7 +18,7 @@ class ResponseThrowable : Exception {
 
     constructor(base: IBaseResponse<*>, e: Throwable? = null) : super(e) {
         this.code = base.code()
-        this.errMsg = base.msg()
+        this.errMsg = base.codeMsg()
     }
 }
 

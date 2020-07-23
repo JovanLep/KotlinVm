@@ -102,8 +102,8 @@ open class BaseViewModel : AndroidViewModel(Utils.getApp()), LifecycleObserver {
         success: suspend CoroutineScope.(T) -> Unit
     ) {
         coroutineScope {
-            if (response.isSuccess()) success(response.data())
-            else throw ResponseThrowable(response.code(), response.msg())
+            if (response.isSuccess()) success(response.result())
+            else throw ResponseThrowable(response.code(), response.codeMsg())
         }
     }
 

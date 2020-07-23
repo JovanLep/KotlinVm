@@ -4,6 +4,19 @@ import com.zhen.mvvm.network.ResponseThrowable
 
 abstract class BaseModel {
 
+    suspend fun <T> cacheNetCall(
+        remoto: suspend () -> IBaseResponse<T>,
+        save: suspend (T) -> Unit,
+        isUseCache: (T?) -> Boolean = { true }
+    ): T {
+        val net = remoto()
+        if (net.isSuccess()) {
+            return net.result()!!.also { save(it) }
+        }
+        throw ResponseThrowable(net)
+    }
+
+
     /**
      * @param remoto 网络数据
      * @param local 本地数据
@@ -21,7 +34,7 @@ abstract class BaseModel {
         else {
             val net = remoto()
             if (net.isSuccess()) {
-                return net.data()!!.also { save(it) }
+                return net.result()!!.also { save(it) }
             }
             throw ResponseThrowable(net)
         }

@@ -20,7 +20,7 @@ class WelcomeActivity : BaseActivity<NoViewModel, ActivityWelcomeBinding>(), (Vi
     }
 
     fun startGuide() {
-        ARouter.getInstance().build("/app/guide").navigation()
+        ARouter.getInstance().build("/home/main").navigation()
     }
 
     override fun invoke(p1: View) {

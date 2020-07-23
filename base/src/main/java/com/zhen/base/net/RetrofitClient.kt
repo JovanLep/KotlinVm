@@ -1,7 +1,7 @@
 package com.zhen.base.net
 
-import com.pcl.mvvm.common.Constant.BASE_URL
 import com.zhen.base.BuildConfig
+import com.zhen.base.common.HttpConstant.API_BASE_URL
 import com.zhen.mvvm.network.interceptor.Level
 import com.zhen.mvvm.network.interceptor.LoggingInterceptor
 import okhttp3.ConnectionPool
@@ -26,7 +26,7 @@ class RetrofitClient {
         retrofit = Retrofit.Builder()
             .client(getOkHttpClient())
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(BASE_URL)
+            .baseUrl(API_BASE_URL)
             .build()
     }
 

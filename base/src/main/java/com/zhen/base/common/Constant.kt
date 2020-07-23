@@ -1,6 +1,11 @@
-package com.pcl.mvvm.common
+package com.zhen.base.common
 
 object Constant {
+
+        /**
+         * 渠道(指珍品网Android端)
+         */
+        const  val CHANNEL = "4"
 
         /**
          * 快捷登录flag

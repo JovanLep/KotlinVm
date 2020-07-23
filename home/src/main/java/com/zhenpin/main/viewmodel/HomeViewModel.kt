@@ -11,7 +11,7 @@ class HomeViewModel : BaseViewModel() {
         HomeRepository.getInstance(HomeNetWork.getInstance())
     }
 
-    public val service = MutableLiveData<ConfigBean>()
+     val service = MutableLiveData<ConfigBean>()
 
     fun getServiceConfig(): MutableLiveData<ConfigBean> {
         launchOnlyResult({

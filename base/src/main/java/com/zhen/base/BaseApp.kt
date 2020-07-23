@@ -2,7 +2,7 @@ package com.zhen.base
 
 import android.app.Application
 import com.alibaba.android.arouter.launcher.ARouter
-import com.pcl.mvvm.common.Constant.NET_RELEASE
+import com.zhen.base.common.Constant.NET_RELEASE
 
 open class BaseApp : Application() {
 

@@ -1,6 +1,6 @@
 package com.zhen.base.common
 
-import com.pcl.mvvm.common.Constant.NET_RELEASE
+import com.zhen.base.common.Constant.NET_RELEASE
 import com.zhen.base.BaseApp
 
 object HttpConstant {

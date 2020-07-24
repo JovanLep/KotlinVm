@@ -10,7 +10,6 @@ import retrofit2.http.POST
 
 interface HomeApi : ApiService {
 
-
     @FormUrlEncoded
     @POST(API_HOME_URL + "newEditionHomePage/serverConfig.json")
     suspend fun getConfig(@FieldMap formMap: Map<String, String>): BaseResult<ConfigBean>

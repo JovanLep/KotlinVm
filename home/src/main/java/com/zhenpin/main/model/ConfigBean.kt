@@ -13,5 +13,16 @@ class ConfigBean {
             : Long = 0
     var newPepleInfo: String? = null
     var newPepleInfoStrong: String? = null
-
+    override fun toString(): String {
+        return "ConfigBean(submitDelay=$submitDelay, " +
+                "android_force_version=$android_force_version," +
+                "android_now_version=$android_now_version, " +
+                "android_tip=$android_tip, " +
+                "androidMandatoryType=$androidMandatoryType, " +
+                "testurl=$testurl, " +
+                "testurltwo=$testurltwo, " +
+                "systemTime=$systemTime, " +
+                "newPepleInfo=$newPepleInfo, " +
+                "newPepleInfoStrong=$newPepleInfoStrong)"
+    }
 }

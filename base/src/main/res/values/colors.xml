@@ -1,6 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#6200EE</color>
-    <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="white_6">#99ffffff</color>
+    <color name="white_7_5">#bfffffff</color>
+
+    <color name="red_87001b">#87001b</color>
+    <color name="red_8c3410">#8c3410</color>
+    <color name="red_d21034">#d21034</color>
+    <color name="red_d68768">#d68768</color>
+    <color name="red_a42121">#a42121</color>
+    <color name="red_b31230">#b31230</color>
+    <color name="red_e20c0c">#e20c0c</color>
+    <color name="red_efc691">#efc691</color>
+    <color name="red_f0acb8">#f0acb8</color>
+    <color name="red_f3ddc0">#f3ddc0</color>
+    <color name="red_f66767">#f66767</color>
+    <color name="red_fa4242_7">#b3fa4242</color>
+    <color name="red_ffafaf">#ffafaf</color>
+    <color name="red_fff5f5">#fff5f5</color>
+
+    <color name="orange_f48407">#f48407</color>
+    <color name="orange_fe590e">#fe590e</color>
+    <color name="orange_fff1e5">#fff1e5</color>
+    <color name="orange_bd9d62">#bd9d62</color>
+    <color name="orange_e8c17b">#e8c17b</color>
+    <color name="orange_fb9847">#fb9847</color>
+    <color name="orange_ffad6a">#ffad6a</color>
+
+    <color name="brown_bf916c">#bf916c</color>
+
+    <color name="blue_4a90e2">#4a90e2</color>
+    <color name="blue_508cee">#508cee</color>
+    <color name="blue_7ba0db">#7ba0db</color>
+
+    <color name="gray_1f1f1f_8">#cc1f1f1f</color>
+    <color name="gray_222222">#222222</color>
+    <color name="gray_232323">#232323</color>
+    <color name="gray_2f2f2f">#2f2f2f</color>
+    <color name="gray_333333">#333333</color>
+    <color name="gray_474747_4">#66474747</color>
+    <color name="gray_474747">#474747</color>
+    <color name="gray_4c4c4c_8">#cc4c4c4c</color>
+    <color name="gray_4c4c4c">#4c4c4c</color>
+    <color name="gray_606060_4">#66606060</color>
+    <color name="gray_606060">#606060</color>
+    <color name="gray_666666">#666666</color>
+    <color name="gray_707070">#707070</color>
+    <color name="gray_7f7f7f_8">#cc7f7f7f</color>
+    <color name="gray_7f7f7f">#7f7f7f</color>
+    <color name="gray_808080">#808080</color>
+    <color name="gray_8a8a8a">#8a8a8a</color>
+    <color name="gray_999999">#999999</color>
+    <color name="gray_9a9a9a">#9a9a9a</color>
+    <color name="gray_a9a9a9">#a9a9a9</color>
+    <color name="gray_aaaaaa">#aaaaaa</color>
+    <color name="gray_b2b2b2">#b2b2b2</color>
+    <color name="gray_bfbfbf">#bfbfbf</color>
+    <color name="gray_bbbbbb">#bbbbbb</color>
+    <color name="gray_c8c8c8">#c8c8c8</color>
+    <color name="gray_cccccc">#cccccc</color>
+    <color name="gray_cdcdcd">#cdcdcd</color>
+    <color name="gray_d1d1d1">#d1d1d1</color>
+    <color name="gray_dddddd">#dddddd</color>
+    <color name="gray_d9d9d9">#d9d9d9</color>
+    <color name="gray_dadada">#dadada</color>
+    <color name="gray_dedede">#dedede</color>
+    <color name="gray_e0e0e0">#e0e0e0</color>
+    <color name="gray_e1e8eb">#e1e8eb</color>
+    <color name="gray_e4e4e4">#e4e4e4</color>
+    <color name="gray_e5e5e5">#e5e5e5</color>
+    <color name="gray_e6e6e6">#e6e6e6</color>
+    <color name="gray_e7e7e7">#e7e7e7</color>
+    <color name="gray_e8e8e8">#e8e8e8</color>
+    <color name="gray_eaeaea">#eaeaea</color>
+    <color name="gray_ebebeb_6_7">#aaebebeb</color>
+    <color name="gray_ebebeb_9">#e6ebebeb</color>
+    <color name="gray_ebebeb">#ebebeb</color>
+    <color name="gray_ececec">#ececec</color>
+    <color name="gray_eeeeee">#eeeeee</color>
+    <color name="gray_f0f0f0">#f0f0f0</color>
+    <color name="gray_f1f1f1">#f1f1f1</color>
+    <color name="gray_f2f2f2">#f2f2f2</color>
+    <color name="gray_f4f4f4">#f4f4f4</color>
+    <color name="gray_f5f5f5">#f5f5f5</color>
+    <color name="gray_f6f6f6">#f6f6f6</color>
+    <color name="gray_f7f7f7">#f7f7f7</color>
+    <color name="gray_f8f8f8">#f8f8f8</color>
+    <color name="gray_f9f9f9">#f9f9f9</color>
+
+    <color name="black_0_0_5">#14000000</color>
+    <color name="black_0_5">#7c000000</color>
+    <color name="black_4">#66000000</color>
+    <color name="black_5">#7f000000</color>
+    <color name="black_6">#99000000</color>
+    <color name="black_6_5">#A6000000</color>
+
+    <drawable name="red_d21034">#d21034</drawable>
+    <drawable name="gray_f6f6f6">#f6f6f6</drawable>
+    <drawable name="white">#ffffff</drawable>
+    <drawable name="black">#000000</drawable>
+    <drawable name="transparent">#00000000</drawable>
 </resources>

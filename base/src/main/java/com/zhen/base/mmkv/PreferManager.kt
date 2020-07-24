@@ -22,21 +22,13 @@ class PreferManager {
     }
 
     fun put(key: String?, `object`: Any?) {
-        if (mmkv == null) {
-            return
-        }
-        if (`object` is String) {
-            mmkv!!.encode(key, `object` as String?)
-        } else if (`object` is Int) {
-            mmkv!!.encode(key, (`object` as Int?)!!)
-        } else if (`object` is Boolean) {
-            mmkv!!.encode(key, (`object` as Boolean?)!!)
-        } else if (`object` is Float) {
-            mmkv!!.encode(key, (`object` as Float?)!!)
-        } else if (`object` is Long) {
-            mmkv!!.encode(key, (`object` as Long?)!!)
-        } else {
-            mmkv!!.encode(key, `object` as String?)
+        when (`object`) {
+            is String -> mmkv?.encode(key, `object` as String?)
+            is Int -> mmkv?.encode(key, (`object` as Int?)!!)
+            is Boolean -> mmkv?.encode(key, (`object` as Boolean?)!!)
+            is Float -> mmkv?.encode(key, (`object` as Float?)!!)
+            is Long -> mmkv?.encode(key, (`object` as Long?)!!)
+            else -> mmkv?.encode(key, `object` as String?)
         }
     }
 
@@ -44,21 +36,17 @@ class PreferManager {
         if (mmkv == null) {
             createFile(key)
         }
-        if (defaultObject is String) {
-            return mmkv!!.decodeString(key, defaultObject as String?)
-        } else if (defaultObject is Int) {
-            return mmkv!!.decodeInt(key, (defaultObject as Int?)!!)
-        } else if (defaultObject is Boolean) {
-            return mmkv!!.decodeBool(key, (defaultObject as Boolean?)!!)
-        } else if (defaultObject is Float) {
-            return mmkv!!.decodeFloat(key, (defaultObject as Float?)!!)
-        } else if (defaultObject is Long) {
-            return mmkv!!.decodeLong(key, (defaultObject as Long?)!!)
+        return when (defaultObject) {
+            is String -> mmkv?.decodeString(key, defaultObject as String?)
+            is Int -> mmkv?.decodeInt(key, (defaultObject as Int?)!!)
+            is Boolean -> mmkv?.decodeBool(key, (defaultObject as Boolean?)!!)
+            is Float -> mmkv?.decodeFloat(key, (defaultObject as Float?)!!)
+            is Long -> mmkv?.decodeLong(key, (defaultObject as Long?)!!)
+            else -> mmkv?.decodeString(key, defaultObject as String?)
         }
-        return null
     }
 
     fun remove(key: String?) {
-        mmkv!!.remove(key)
+        mmkv?.remove(key)
     }
 }

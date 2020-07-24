@@ -1,15 +1,17 @@
-package com.zhenpin.luxurystore
+package com.zhenpin.luxurystore.activity
 
 import android.os.Bundle
 import com.zhen.base.bases.BaseBarActivity
 //import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.zhen.mvvm.base.NoViewModel
+import com.zhenpin.luxurystore.R
 import com.zhenpin.luxurystore.databinding.ActivityGuideBinding
 
 @Route(path = "/app/guide")
 class GuideActivity : BaseBarActivity<NoViewModel, ActivityGuideBinding>() {
-    override fun layoutId(): Int = R.layout.activity_guide
+    override fun layoutId(): Int =
+        R.layout.activity_guide
     override fun initView(savedInstanceState: Bundle?) {
 
     }

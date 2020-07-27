@@ -7,5 +7,9 @@
         <item name="colorPrimary">@android:color/white</item>
         <item name="colorPrimaryDark">@android:color/black</item>
     </style>
+    
+    <style name="bottom_tab_title_active">
+        <item name="android:textSize">9sp</item>
+    </style>
 
 </resources>

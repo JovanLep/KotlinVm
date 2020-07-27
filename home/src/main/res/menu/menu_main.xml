@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_bottom_1"
+        android:enabled="true"
+        android:icon="@drawable/bottom_tab_a"
+        android:title="首页"
+        />
+    <item
+        android:id="@+id/item_bottom_2"
+        android:enabled="true"
+        android:icon="@drawable/bottom_tab_b"
+        android:title="分类"
+        />
+    <item
+        android:id="@+id/item_bottom_3"
+        android:enabled="true"
+        android:icon="@drawable/bottom_tab_c"
+        android:title="品牌"
+        />
+    <item
+        android:id="@+id/item_bottom_4"
+        android:enabled="true"
+        android:icon="@drawable/bottom_tab_shop"
+        android:title="购物袋"
+        />
+    <item
+        android:id="@+id/item_bottom_5"
+        android:enabled="true"
+        android:icon="@drawable/bottom_tab_e"
+        android:title="我的"
+        />
+</menu>

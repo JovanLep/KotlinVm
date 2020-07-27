@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</layout>
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rl_top_tab_bar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/dp_44">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/img_tab_logo"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginStart="@dimen/dp_15"-->
+<!--            tools:ignore="ContentDescription,HardcodedText" />-->
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/rl_title_msg"-->
+<!--            android:layout_width="@dimen/dp_33"-->
+<!--            android:layout_height="@dimen/dp_30"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginEnd="@dimen/dp_15"-->
+<!--            android:background="@drawable/bg_common_topbar"-->
+<!--            android:clipChildren="false">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/iv_title_msg"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginBottom="@dimen/dp_5"-->
+<!--                android:src="@drawable/icon_news_gary"-->
+<!--                tools:ignore="ContentDescription" />-->
+
+<!--            <com.zhenpin.luxurystore.view.MsgView xmlns:mv="http://schemas.android.com/apk/res-auto"-->
+<!--                android:id="@+id/mv_msg_num"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginStart="@dimen/dp_10"-->
+<!--                android:gravity="center"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:textSize="@dimen/sp_9"-->
+<!--                mv:mv_backgroundColor="@color/red_d21034"-->
+<!--                mv:mv_isRadiusHalfHeight="true"-->
+<!--                mv:mv_strokeColor="@android:color/transparent"-->
+<!--                mv:mv_strokeWidth="@dimen/dp_1" />-->
+
+<!--        </RelativeLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/rel_tab_searchbar_no_click"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/dp_28"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginStart="@dimen/dp_15"-->
+<!--            android:layout_marginEnd="@dimen/dp_18"-->
+<!--            android:layout_toStartOf="@id/rl_title_msg"-->
+<!--            android:layout_toEndOf="@id/img_tab_logo"-->
+<!--            android:background="@drawable/bg_home_search_tab"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingLeft="@dimen/dp_15">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/img_tab_search"-->
+<!--                android:layout_width="@dimen/dp_12"-->
+<!--                android:layout_height="@dimen/dp_12"-->
+<!--                android:src="@drawable/icon_home_search_grey"-->
+<!--                tools:ignore="ContentDescription" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/txt_tab_search"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="4dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="@string/search_title_hint"-->
+<!--                android:textColor="@color/gray_b2b2b2"-->
+<!--                android:textSize="@dimen/sp_12" />-->
+
+<!--            <RelativeLayout-->
+<!--                android:id="@+id/rl_camera"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:paddingLeft="@dimen/dp_15"-->
+<!--                android:paddingRight="@dimen/dp_15">-->
+
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:layout_width="@dimen/dp_17"-->
+<!--                    android:layout_height="@dimen/dp_14"-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:scaleType="fitXY"-->
+<!--                    android:src="@mipmap/icon_camera" />-->
+<!--            </RelativeLayout>-->
+<!--        </LinearLayout>-->
+<!--    </RelativeLayout>-->

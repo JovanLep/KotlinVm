@@ -64,7 +64,7 @@ dependencies {
     //paging3
     api rootProject.ext.pagings
     //神策
-//    releaseImplementation rootProject.ext.dependencies.analytics
+//    api rootProject.ext.dependencies.analytics
     //banner
     api rootProject.ext.dependencies.mmkv
     //banner
@@ -78,7 +78,9 @@ dependencies {
     kapt rootProject.ext.dependencies["arouter-compiler"]
 
     //微信
-    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:5.5.8'
+    implementation rootProject.ext.dependencies.wechat
+    //视频播放
+    api rootProject.ext.dependencies.video
     //支付宝
     implementation(name: 'alipaySdk-15.7.7-20200702160044', ext: 'aar')
 

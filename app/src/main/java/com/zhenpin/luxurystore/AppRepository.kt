@@ -2,14 +2,14 @@ package com.zhenpin.luxurystore
 
 import com.zhen.base.net.BaseResult
 import com.zhen.mvvm.base.BaseModel
-import com.zhenpin.luxurystore.model.GetWelcomeImgResultBean
+import com.zhenpin.luxurystore.model.WelcomeImgBean
 import com.zhenpin.luxurystore.net.AppNetWork
 
 class AppRepository private constructor(
     private val netWork: AppNetWork
 ) : BaseModel() {
 
-    suspend fun getHomeImg(resolutionRatio: String): BaseResult<GetWelcomeImgResultBean> {
+    suspend fun getHomeImg(resolutionRatio: String): BaseResult<WelcomeImgBean> {
         return netWork.getHomeImg(resolutionRatio)
     }
 

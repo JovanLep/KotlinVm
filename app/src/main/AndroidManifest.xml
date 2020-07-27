@@ -35,7 +35,6 @@
             </intent-filter>
         </activity>
         <activity android:name="com.zhenpin.luxurystore.activity.GuideActivity"/>
-        <activity android:name="com.zhenpin.luxurystore.Main3Activity"/>
 
 
 

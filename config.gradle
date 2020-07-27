@@ -88,11 +88,13 @@ ext {
             //神策
             "analytics"                 : 'com.sensorsdata.analytics.android:SensorsAnalyticsSDK:4.1.2',
             //内存检测
-            "leakcanary": 'com.squareup.leakcanary:leakcanary-android:2.2',
+            "leakcanary"                : 'com.squareup.leakcanary:leakcanary-android:2.2',
             //听云
-            "newlens": 'com.networkbench.newlens.agent.android:nbs.newlens.agent:2.14.6',
-
-
+            "newlens"                   : 'com.networkbench.newlens.agent.android:nbs.newlens.agent:2.14.6',
+            //微信
+            "wechat"                    : 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:5.5.8',
+            //视频播放
+            "video"                     : 'com.shuyu:GSYVideoPlayer:7.1.3'
 
     ]
 

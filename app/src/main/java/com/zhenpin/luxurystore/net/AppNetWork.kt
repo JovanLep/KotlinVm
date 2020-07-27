@@ -7,7 +7,6 @@ class AppNetWork {
 
     private var params: MutableMap<String, String> = HashMap()
 
-
     suspend fun getHomeImg(resolutionRatio: String) =
         homeService.getHomeImg(getData(resolutionRatio))
 

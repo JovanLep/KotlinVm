@@ -14,6 +14,6 @@ data class BaseResult<T>(
 
     override fun result() = result
 
-    override fun isSuccess() = code == 200
+    override fun isSuccess() = (code == 200 && result != null)
 
 }

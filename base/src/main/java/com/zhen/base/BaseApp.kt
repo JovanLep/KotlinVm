@@ -1,6 +1,7 @@
 package com.zhen.base
 
 import android.app.Application
+import android.content.Context
 import com.alibaba.android.arouter.launcher.ARouter
 import com.zhen.base.common.Constant.NET_RELEASE
 import com.zhen.base.mmkv.PreferManager
@@ -8,8 +9,10 @@ import com.zhen.base.mmkv.PreferManager
 open class BaseApp : Application() {
 
 
+
     companion object {
         var NET_ENVIRONMENT_TYPE = 0 //网络环境类型 0-正式环境 1-测试环境 2-沙箱环境
+
     }
 
     override fun onCreate() {
